@@ -23,7 +23,7 @@ public class Sample3 implements Executor {
     @Override
     public void execute() {
         Marker flowMarker =new MarkerManager.Log4jMarker("NORMAL");
-        IntStream.range(1,4).parallel().forEach(x -> {
+        IntStream.range(0,20).parallel().forEach(x -> {
             log.fatal(flowMarker, "entering application"); // check marker here
             try {
                 Thread.sleep(5000);
